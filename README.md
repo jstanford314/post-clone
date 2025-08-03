@@ -58,9 +58,9 @@ sudo reboot
 📜 Optional: Run Script
 
 You can automate the steps above with:
-
+````bash
 ./post-clone.sh
-
+````
 
 ---
 
