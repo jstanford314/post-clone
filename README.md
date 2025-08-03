@@ -4,7 +4,7 @@ This guide helps you configure full-cloned Ubuntu Server VMs created in Proxmox 
 
 ---
 
-## ✅ Steps
+## Steps
 
 ### 1. Remove Cloud-Init
 ```bash
