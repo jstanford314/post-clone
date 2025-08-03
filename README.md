@@ -7,16 +7,17 @@ This guide helps you configure full-cloned Ubuntu Server VMs created in Proxmox 
 ## Steps
 
 ### 1. Remove Cloud-Init
-```bash
+
+````bash
 sudo apt purge -y cloud-init
 sudo rm -rf /etc/cloud /var/lib/cloud
-
+````
 ### 2. Configure Static IP with Netplan
 
 Edit your netplan config:
 
 sudo nano /etc/netplan/00-installer-config.yaml
-```bash
+````bash
 Example:
 
 network:
@@ -29,10 +30,11 @@ network:
       gateway4: 10.1.20.1
       nameservers:
         addresses: [1.1.1.1, 8.8.8.8]
-
+````
 Apply it:
-
+````bash
 sudo netplan apply
+````
 
 3. Set Hostname
 
@@ -72,3 +74,4 @@ git add .
 git commit -m "Initial post-clone setup for Ubuntu on Proxmox"
 gh repo create ubuntu-post-clone-setup --public --source=. --remote=origin
 git push -u origin main
+````
