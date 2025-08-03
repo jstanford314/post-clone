@@ -37,24 +37,24 @@ sudo netplan apply
 ````
 
 3. Set Hostname
-
+````bash
 sudo hostnamectl set-hostname NEW_HOSTNAME
 sudo nano /etc/hosts
-
+````
 Update:
 
 127.0.1.1    NEW_HOSTNAME
 
 4. Reset Machine ID
-
+````bash
 sudo truncate -s 0 /etc/machine-id
 sudo rm -f /var/lib/dbus/machine-id
 sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
-
+````
 Reboot to regenerate:
-
+````bash
 sudo reboot
-
+````
 📜 Optional: Run Script
 
 You can automate the steps above with:
